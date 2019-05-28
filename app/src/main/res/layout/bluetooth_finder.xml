@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/listDevice"
+        android:layout_width="379dp"
+        android:layout_height="503dp"
+        android:layout_below="@id/switchBluetooth"
+
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="182dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/listDevice"
+        android:onClick="btnDiscover"
+        android:text="Search" />
+
+    <Button
+        android:id="@+id/btnPair"
+        android:layout_width="227dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/listDevice"
+        android:layout_toRightOf="@id/btnSearch"
+        android:onClick="pairing"
+        android:text="Pair to device" />
+
+    <Switch
+        android:id="@+id/switchBluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:focusable="auto"
+        android:onClick="onEnableOnOff"
+        android:text="bluetooth enabling" />
+</RelativeLayout>
